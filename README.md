@@ -24,4 +24,22 @@ Installation: string is also part of the Python Standard Library, so no installa
 Summary of Libraries:
 OpenCV (cv2): For image processing (reading, saving, manipulating the image).
 os: For system-level operations (opening images in the default viewer).
+Key Unique Features:
+Steganography with RGB Channels:
+The message is embedded directly into the image pixels by converting each character of the message into its corresponding RGB value using a dictionary (d and c).
+The message is hidden by modifying the RGB values of the image in a way that does not noticeably distort the image visually, making it a form of steganography.
+Encryption with Password:
+Before embedding the message, a password is required for encryption. The message can only be decrypted with the correct password, which adds a layer of security.
+The use of a password ensures that only those who know the passcode can retrieve the hidden message, enhancing the privacy of the embedded data.
+Image-based Encryption:
+This project uses the actual image as a medium for encryption. Rather than creating an entirely new encrypted file, the image itself becomes the carrier of the hidden message.
+The message is embedded pixel by pixel (in RGB channels), making the encrypted message part of the image's data.
+Cross-platform Displaying:
+The code includes a command to automatically open the encrypted image (os.system("start encryptedImage.jpg")), which works on Windows.
+This makes it easier for the user to visualize the encrypted image and see how the message is hidden without needing any additional viewer.
+Manual Decryption:
+The decryption process requires input from the user, specifically the correct password to decode the hidden message.
+This manual intervention allows for added security, as it prevents unauthorized access to the original message without the correct password.
+
+
 
